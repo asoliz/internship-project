@@ -8,4 +8,4 @@ def open_signin_page(context):
 
 @when('User log in')
 def signin_successfully(context):
-    context.app.signin_successfully('nomacas893@fogdiver.com', 'ReelyCool!')
+    context.app.signin_page.signin_successfully('nomacas893@fogdiver.com', 'ReelyCool!')

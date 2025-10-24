@@ -34,6 +34,10 @@ class Page:
                                   message=f'Element by {locator} did not appear.')
         return element
 
+    def wait_until_all_elements_appear(self, *locator):
+        element = self.wait.until(EC.visibility_of_all_elements_located(locator),
+                                  message=f'Element by {locator} did not appear.')
+
     def wait_until_element_disappears(self, *locator):
         self.wait.until(EC.invisibility_of_element_located(locator),
                         message=f'Element by {locator} did not disappear.')

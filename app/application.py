@@ -1,4 +1,5 @@
 from pages.base_page import Page
+from pages.main_page import MainPage
 from pages.signin_page import SigninPage
 
 
@@ -9,3 +10,4 @@ class Application:
 
         self.page = Page(driver)
         self.signin_page = SigninPage(driver)
+        self.main_page = MainPage(driver)
