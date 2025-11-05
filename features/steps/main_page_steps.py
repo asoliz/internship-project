@@ -13,4 +13,4 @@ def filter_by_outofstock(context):
 
 @then("Verify each product contains the out of stock tag")
 def verify_correct_tag(context):
-    context.app.main_page.verify_correct_tag('Out of Stock')
+    context.app.main_page.verify_correct_tag('Out Of Stock')

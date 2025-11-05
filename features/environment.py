@@ -19,9 +19,9 @@ def browser_init(context):
     context.app = Application(context.driver)
 
     ### HEADLESS MODE ###
-    # options = webdriver.ChromeOptions()
-    # options.add_argument('headless')
-    # context.driver = webdriver.Chrome(options=options)
+    options = webdriver.ChromeOptions()
+    options.add_argument('headless')
+    context.driver = webdriver.Chrome(options=options)
 
 
 def before_scenario(context, scenario):

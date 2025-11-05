@@ -20,11 +20,12 @@ class MainPage(Page):
     def filter_by_outofstocks(self):
         self.wait_until_clickable_then_click(*self.SALE_STATUS_FILTER)
         self.wait_until_clickable_then_click(*self.FILTER_OUT_OF_STOCK)
-        body_element = self.find_element(*self.OUTSIDE)  # the body of the elements
+        body_element = self.find_element(By.TAG_NAME, 'body')  # the body of the elements
         body_element.click()  # click anywhere
-        sleep(5)
+        sleep(7)
 
     def verify_correct_tag(self, expected_tag):
+
         elements = self.find_elements(*self.LISTINGS)
         for e in elements:
             actual_tag = e.find_element(*self.SALE_STATUS_TAG).text
